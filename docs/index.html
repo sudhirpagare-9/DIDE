@@ -96,5 +96,25 @@
 
     </div>
   </main>
+  
+<script>
+const WORKER =
+  "https://dide-download-tracker.sudhir-dide-analytics-2026.workers.dev";
+
+const button = document.getElementById("download");
+
+let visitorId = localStorage.getItem("dide_visitor");
+
+if (!visitorId) {
+  visitorId = crypto.randomUUID();
+  localStorage.setItem("dide_visitor", visitorId);
+}
+
+button.href =
+  WORKER + "/api/download" +
+  "?source=website" +
+  "&visitor=" + encodeURIComponent(visitorId);
+</script>
+
 </body>
 </html>
