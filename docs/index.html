@@ -35,6 +35,18 @@
     a.link { color:#a5ceff; }
     small { display:block; margin-top:26px; color:#b7c9de; font-size:.83rem; line-height:1.7; }
     footer { margin-top:22px; color:#91a8c5; font-size:.85rem; }
+
+    .help-heading{font-size:clamp(25px,3vw,36px);margin:0 0 12px}
+    .resources{margin-top:24px;padding:30px;border:1px solid var(--border);border-radius:22px;background:#172844}
+    .resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .resource{background:#12213a;border:1px solid #355078;border-radius:15px;padding:22px}
+    .resource h3{margin:0 0 7px;font-size:1.08rem}
+    .resource p{font-size:.92rem;margin:8px 0 18px}
+    a.doclink{color:#eef7ff;text-decoration:none;background:#206f9e;border:1px solid #4698cd;border-radius:10px;padding:11px 14px;display:inline-block;font-weight:650}
+    .watch{margin-top:25px;max-width:100%;width:100%;border-radius:14px;border:1px solid #46618a;background:#0b1528}
+    .note{font-size:.87rem;color:#bed1e7;margin-top:11px}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:19px}
+    .steps div{border:1px solid #355078;border-radius:12px;padding:13px;background:#11213a;font-size:.9rem}
   </style>
 </head>
 <body>
@@ -59,6 +71,23 @@
         Windows 10/11 · Prototype beta. Verify the publisher and SHA-256 checksum if one is published before installation.
         Download-button requests are routed through Cloudflare, which may record a browser identifier, request time, software version and approximate location based on IP address. GitHub serves the installer. Requests do not prove download completion.
       </small>
+    </section>
+
+    <section class="resources" id="guide" aria-label="Getting started documentation">
+      <div class="eyebrow">Documentation &amp; training</div>
+      <h2 class="help-heading">Learn how to use DIDE</h2>
+      <p>Follow the quick-start guide, watch the animated introduction, and learn how to review OCR results before exporting to Excel.</p>
+      <div class="resource-grid">
+        <div class="resource"><h3>PDF user guide</h3><p>Installation, upload, rotation, extraction, reviewing fields, Excel export and troubleshooting.</p><a class="doclink" href="assets/DIDE_User_Guide.pdf" target="_blank" rel="noopener">Read / download PDF</a></div>
+        <div class="resource"><h3>Animated walkthrough</h3><p>A short silent tutorial with clear steps for first-time users.</p><a class="doclink" href="#tutorial">Watch the tutorial</a></div>
+        <div class="resource"><h3>Support and feedback</h3><p>Report bugs and beta feedback without posting confidential documents publicly.</p><a class="doclink" href="https://github.com/sudhirpagare-9/DIDE/issues" target="_blank" rel="noopener">Open GitHub Issues</a></div>
+      </div>
+      <video id="tutorial" class="watch" controls playsinline preload="metadata" poster="assets/tutorial-poster.png" aria-label="DIDE animated walkthrough, approximately 32 seconds">
+        <source src="assets/DIDE_Animated_Walkthrough.mp4" type="video/mp4">
+        Your browser does not support video. <a href="assets/DIDE_Animated_Walkthrough.mp4">Download the walkthrough</a>.
+      </video>
+      <p class="note">Animated explainer based on the DIDE v2.0 workflow, not a live recording. No audio. OCR and field-mapping results require review.</p>
+      <div class="steps"><div><b>01</b> Download &amp; install</div><div><b>02</b> Add documents</div><div><b>03</b> Rotate &amp; preview</div><div><b>04</b> Start extraction</div><div><b>05</b> Edit &amp; approve</div><div><b>06</b> Export Excel</div></div>
     </section>
     <footer>DIDE is a beta application. Please verify extracted data before using it in business decisions.</footer>
   </main>
